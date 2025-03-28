@@ -15,21 +15,14 @@
             
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0" Grid.ColumnSpan="3">
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,3" >
-                    <GradientStop Color="Black" Offset="0.1"/>
-                    <GradientStop Color="#111111" Offset="0.2"/>
-                    <GradientStop Color="#0a0a0a" Offset="0.3"/>
-                </LinearGradientBrush>
-            </Grid.Background>
+        <Grid Background="Black" Grid.Row="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.3*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="0.14*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Style="{DynamicResource ButtonZero}" Height="70" HorizontalAlignment="Center" Background="Transparent" Click="Button_Click">
-                <Image Source="/Images/logo.jpg"></Image>
+                <Image Source="/Images/abc.JPG"></Image>
             </Button>
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
@@ -43,7 +36,6 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Image Stretch="UniformToFill" Source="images/back.jpg"></Image>
             <Frame Name="frame" NavigationUIVisibility="Hidden" />
         </Grid>
         
