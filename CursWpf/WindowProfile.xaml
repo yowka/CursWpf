@@ -25,18 +25,19 @@
                 <StackPanel Opacity="60" Height="40" Grid.ColumnSpan="2">
                     <Grid Height="40">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="10*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Button BorderBrush="Transparent" HorizontalAlignment="Left" Grid.Column="0" Background="Transparent" Click="Button_back">
                             <Image Margin="20 2" HorizontalAlignment="Left" Source="images/back2.png" Grid.Column="0"></Image>
                         </Button>
-                        <Button Margin="20 2" Height="34" Grid.Column="1" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Click="Button_close" FontSize="20" Content="Выход" Foreground="#FF2400"></Button>
+                        <Button Margin="94,3,0,3" Height="34" Grid.Column="2" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Click="Button_close" FontSize="20" Content="Выход" Foreground="#FF2400"></Button>
                     </Grid>
                 </StackPanel>
             </Border>
             <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
-                    <Button ToolTip="Добавить фото профиля" Background="Transparent" BorderBrush="Transparent" Click="Button_add_image">
+                <Button ToolTip="Добавить фото профиля" Background="Transparent" BorderBrush="Transparent" Click="Button_add_image">
                     <Border Margin="10" CornerRadius="170" BorderThickness="2" BorderBrush="Black">
                         <Image Width="170" Height="170" Stretch="UniformToFill" x:Name="ProfileImage" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image.Clip>
@@ -47,8 +48,8 @@
                             </Image.Source>
                         </Image>
                     </Border>
-                        
-                    </Button>
+
+                </Button>
                 <StackPanel>
                     <Label Content="Логин" FontSize="16" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
                     <TextBox Style="{DynamicResource TextBox}" Grid.Row="3" x:Name="txtLogin"></TextBox>
