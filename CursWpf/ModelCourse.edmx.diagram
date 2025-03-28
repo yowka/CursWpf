@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1175b37dad9343bfbd9e75f09a4b1512" Name="Diagram1">
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Automobile" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Brand" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Buyer" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Color" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Employee" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Role" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.Sale_automobile" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="skirnevskiy_courseModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK__Sale_auto__Autom__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Automobile_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Automobile_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Automobile_Color" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Buyer_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Sale_automobile_Buyer1" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="skirnevskiy_courseModel.FK_Sale_automobile_Employee" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

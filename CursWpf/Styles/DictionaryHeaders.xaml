@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Label" x:Key="lbHeader">
+        <Setter Property="FontSize" Value="40"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
+        <Setter Property="FontFamily" Value="Edwardian Script ITC"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+</ResourceDictionary>

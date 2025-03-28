@@ -1,0 +1,45 @@
+﻿<Page x:Class="CursWpf.Pages.PageAutomobile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAutomobile">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="203*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#9d9d9d" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <Border Margin="10 0" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="16" BorderThickness="1" BorderBrush="White" Background="#abcdef">
+                <Button Style="{DynamicResource btnPanel}" Content="Обновить" Background="{x:Null}" BorderThickness="0" Click="Button_Save"></Button>
+            </Border>
+            <Border Margin="10 0" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="16" BorderThickness="1" BorderBrush="White" Background="#ddadaf">
+                <Button Style="{DynamicResource btnPanel}" Content="Удалить" Background="{x:Null}" BorderThickness="0" Click="Button_Delete"></Button>
+            </Border>
+
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
+            <DataGrid x:Name="ListUser" MaxHeight="500" MinHeight="500" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Visibility="Collapsed" Header="Id" Binding="{Binding id}"/>
+                    <DataGridTextColumn Header="Год производства" Binding="{Binding year_of_production}"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding price}"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding title}"/>
+                    <DataGridTextColumn Visibility="Collapsed" Header="Бренд ID" Binding="{Binding Brand_ID}"/>
+                    <DataGridTextColumn Visibility="Collapsed" Header="Цвет ID" Binding="{Binding Color_ID}"/>
+                    <DataGridTextColumn Visibility="Collapsed" Header="Категория ID" Binding="{Binding Category_ID}"/>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

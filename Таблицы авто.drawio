@@ -1,0 +1,323 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Страница — 1" id="Xzd1bji_GdA-_0YpvKNI">
+    <mxGraphModel dx="1292" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q36-Nd-DIAhg20786Joc-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry width="200" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Авторизация&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="40" y="190" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-9" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;Авторизация&lt;/span&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-12" value="&lt;i&gt;&lt;font color=&quot;#cc0066&quot;&gt;ФИ клиента и номер&lt;/font&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="10" y="40" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-13" value="Имя" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="75" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="75" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-15" value="Фамилия" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="105" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-16" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="105" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-17" value="Телефон" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="135" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="135" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-35" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="385" width="400" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-36" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Главная страница&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="385" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-39" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Каталог&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="385" y="30" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-40" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Личный кабинет&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="585" y="30" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-42" value="" style="curved=1;endArrow=classic;html=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Q36-Nd-DIAhg20786Joc-8" target="Q36-Nd-DIAhg20786Joc-36" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="410" as="sourcePoint" />
+            <mxPoint x="352.7000000000003" y="168.80999999999995" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="310" />
+              <mxPoint x="200" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="840" y="330" width="400" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-45" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Личный кабинет&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="840" y="330" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-46" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Просмотр изданий&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="840" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-47" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Оформить подписку&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="940" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-48" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Просмотр подписок&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-49" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Выход&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-50" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="330" width="400" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-51" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Личный кабинет&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="420" y="330" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-52" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Просмотр изданий&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="420" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-53" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Оформить подписку&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="520" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-54" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Просмотр подписок&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="620" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-55" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Выход&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="720" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-56" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="330" width="400" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-57" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Личный кабинет&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry y="330" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-58" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Просмотр изданий&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-59" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Оформить подписку&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-60" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Просмотр подписок&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="200" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-61" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Выход&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="360" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-62" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="682.5" width="400" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-63" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Личный кабинет&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry y="682.5" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-64" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Просмотр изданий&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry y="712.5" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-65" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Оформить подписку&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="712.5" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-66" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Просмотр подписок&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="200" y="712.5" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-67" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Выход&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="712.5" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-68" value="Завершение приложения" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="500" y="682.5" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-69" value="" style="endArrow=classic;html=1;fontSize=10;" parent="1" source="Q36-Nd-DIAhg20786Joc-67" target="Q36-Nd-DIAhg20786Joc-68" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="810" as="sourcePoint" />
+            <mxPoint x="370" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-70" value="Индекс издания по каталогу" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="395" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-71" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="395" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-72" value="Вид издания" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="425" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="425" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-74" value="Название издания" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="455" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-75" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="455" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-76" value="Цена за 1 экземпляр" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="485" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-77" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="485" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-78" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="610" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-79" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;rotation=180;" parent="1" vertex="1">
+          <mxGeometry x="850" y="610" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-80" value="Индекс издания по каталогу" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="417.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-81" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="625" y="417.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-82" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;rotation=90;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="785" y="417.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-83" value="Дата начало подписки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="472.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-84" value="Текущая дата" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="624" y="472.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-85" value="Срок подписки (кол-во мес.)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="500" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-86" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="625" y="500" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-87" value="Оформить" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="520" y="610" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-88" value="ФИО клиента" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="390" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-89" value="Фамилия Имя Отчество" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="625" y="390" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-90" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="10" y="392.5" width="380" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-91" value="Название издания" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="402.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-92" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="402.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-93" value="Дата начало подписки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="432.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-94" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="432.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-95" value="Срок подписки (кол-во мес.)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="462.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-96" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="462.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-97" value="Количество экземпляров" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="530" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-98" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="625" y="530" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-99" value="Название издания" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="445" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-100" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; text-align: left&quot;&gt;Название издания&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="625" y="445" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-101" value="Итоговая цена" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="435" y="557.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="625" y="557.5" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-103" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="10" y="500" width="380" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-104" value="Название издания" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="510" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-105" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="510" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-106" value="Дата начало подписки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="540" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-107" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="540" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-108" value="Срок подписки (кол-во мес.)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="15" y="570" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-109" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="570" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-110" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="370" y="610" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-111" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;rotation=180;" parent="1" vertex="1">
+          <mxGeometry x="10" y="610" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-112" value="Поле для вывода информации" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="940" y="702.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-113" value="Поле для ввода информации" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="940" y="722.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-114" value="Кнопка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="940" y="742.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-115" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Легенда&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=7" parent="1" vertex="1">
+          <mxGeometry x="940" y="682.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-116" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Элемент меню&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="940" y="762.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-117" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Элемент активного меню&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="940" y="782.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-118" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;rotation=180;" parent="1" vertex="1">
+          <mxGeometry x="940" y="827.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-119" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="827.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-120" value="Кнопки назад/вперед" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="960" y="827.5" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-121" value="" style="endArrow=classic;html=1;fontSize=12;" parent="1" source="Q36-Nd-DIAhg20786Joc-35" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="250" as="sourcePoint" />
+            <mxPoint x="910" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-122" value="" style="endArrow=classic;html=1;fontSize=12;" parent="1" source="Q36-Nd-DIAhg20786Joc-44" target="Q36-Nd-DIAhg20786Joc-50" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1249.9999999999995" y="165" as="sourcePoint" />
+            <mxPoint x="1269.9999999999995" y="165" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-123" value="" style="endArrow=classic;html=1;fontSize=12;" parent="1" source="Q36-Nd-DIAhg20786Joc-50" target="Q36-Nd-DIAhg20786Joc-56" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1070" y="680" as="sourcePoint" />
+            <mxPoint x="1120" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q36-Nd-DIAhg20786Joc-124" value="" style="endArrow=classic;html=1;fontSize=12;" parent="1" source="Q36-Nd-DIAhg20786Joc-56" target="Q36-Nd-DIAhg20786Joc-62" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="990" y="680" as="sourcePoint" />
+            <mxPoint x="1040" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eeFSX5vW1DeJdmX2XE2t-2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Элементы с ролью&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;fontSize=12;gradientColor=#b3b3b3;" parent="1" vertex="1">
+          <mxGeometry x="940" y="802.5" width="200" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
