@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="0.14*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Style="{DynamicResource ButtonZero}" Height="70" HorizontalAlignment="Center" Background="Transparent" Click="Button_Click">
-                <Image Source="/Images/abc.JPG"></Image>
+                <Image Source="/Images/logo.jpg"></Image>
             </Button>
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
@@ -36,6 +36,7 @@
         </Grid>
 
         <Grid Grid.Row="1">
+            <Image Source="images/back.jpg" Stretch="UniformToFill"></Image>
             <Frame Name="frame" NavigationUIVisibility="Hidden" />
         </Grid>
         

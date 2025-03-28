@@ -298,7 +298,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ABC.jpg" />
     <Resource Include="Images\ICON.png" />
     <Resource Include="Images\images %281%29.png" />
     <Resource Include="Images\images.png" />
@@ -312,6 +311,8 @@
     <Folder Include="Public\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\back.jpg" />
+    <Resource Include="Images\logo.jpg" />
     <Content Include="ModelCourse.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelCourse.edmx</DependentUpon>
