@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursWpf"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -22,21 +23,20 @@
                     <ColumnDefinition Width="0.14*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Style="{DynamicResource ButtonZero}" Height="70" HorizontalAlignment="Center" Background="Transparent" Click="Button_Click">
-                <Image Source="/Images/logo.jpg"></Image>
+                <Image Source="/Images/logo-rem.png"></Image>
             </Button>
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Sale" x:Name="sale" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Отчёт о продаже" Visibility="Collapsed"/>
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Tables" x:Name="tables" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Управление таблицами" Visibility="Collapsed"/>
-                <Button Style="{DynamicResource ButtonZero}" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог"/>
+                <Button Style="{DynamicResource ButtonZero}" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог" Click="Button_Catalog"/>
             </StackPanel>
             <Button Click="Button_Profile" Style="{DynamicResource ButtonZero}" Background="Transparent" Height="60" HorizontalAlignment="Center" Grid.Column="2">
-                <Image Source="/Images/ICON.png"></Image>
+                <Image Source="/images/icon-rem.png"></Image>
             </Button>
         </Grid>
 
         <Grid Grid.Row="1">
-            <Image Source="images/back.jpg" Stretch="UniformToFill"></Image>
             <Frame Name="frame" NavigationUIVisibility="Hidden" />
         </Grid>
         

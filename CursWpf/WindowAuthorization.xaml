@@ -10,8 +10,7 @@
         AllowsTransparency="True"
         Background="{x:Null}"
         Title="WindowAuthorization" Height="600" Width="450"
-        KeyDown="Window_KeyDown"
-        >
+        KeyDown="Window_KeyDown">
     <Grid>
         <Border Height="600" Width="450" Background="#272B2F" CornerRadius="20" Opacity="0.90"></Border>
         <Grid>
@@ -26,7 +25,7 @@
             <Button BorderBrush="Transparent" Click="Button_Close" Height="40" Width="40" HorizontalAlignment="Right" Background="Transparent" VerticalAlignment="Top" Margin="8">
                 <Image Source="images/крест простой.png"></Image>
             </Button>
-            <Image Width="180" Height="180" Source="\Images\ABC.jpg">
+            <Image Width="180" Height="180" Source="\images\logo-rem.png">
 
             </Image>
             <Label Content="Автосалон" Grid.Row="1" Style="{DynamicResource lbHeader}"></Label>

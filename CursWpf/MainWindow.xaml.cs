@@ -35,10 +35,15 @@ namespace CursWpf
                 employee.Visibility = Visibility.Visible;
             }
         }
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            frame.Navigate(homePage);
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(null);
+            HomePage homePage = new HomePage();
+            frame.Navigate(homePage);
         }
         private void Click_Employee(object sender, RoutedEventArgs e)
         {
@@ -58,5 +63,11 @@ namespace CursWpf
             WindowProfile windowProfile = new WindowProfile();
             windowProfile.ShowDialog();
         }
+        private void Button_Catalog(object sender, RoutedEventArgs e)
+        {
+            PageCatalog pageCatalog = new PageCatalog();
+            frame.Navigate(pageCatalog);
+        }
+
     }
 }
