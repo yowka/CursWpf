@@ -246,7 +246,7 @@ namespace CursWpf
                         MessageBox.Show("Данные успешно сохранены!");
                     }
                 }
-                else if (DBManager.roles == 2) // Если роль 2 - это сотрудник
+                else if (DBManager.roles == 2) 
                 {
                     var employee = DBManager.db.Employee.FirstOrDefault(emp => emp.id == DBManager.id_employee);
                     if (employee != null)
