@@ -317,6 +317,9 @@
     <Resource Include="Images\back.jpg" />
     <Resource Include="Images\icon-rem.png" />
     <Resource Include="Images\logo-rem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\passvision.png" />
     <Content Include="ModelCourse.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelCourse.edmx</DependentUpon>

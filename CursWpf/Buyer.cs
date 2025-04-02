@@ -25,7 +25,7 @@ namespace CursWpf
         public byte[] photo { get; set; }
         public string password { get; set; }
         public int role_id { get; set; }
-        public bool gender { get; set; }
+        public string gender { get; set; }
         public string name { get; set; }
         public string surname { get; set; }
         public string lastname { get; set; }

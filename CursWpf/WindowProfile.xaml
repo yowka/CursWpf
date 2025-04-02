@@ -8,22 +8,23 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Title="WindowProfile" Height="460" Width="500" WindowStartupLocation="CenterScreen" Background="Transparent">
-    <Grid>
-        <Border Height="460" Width="500" Background="LightGray" CornerRadius="20" BorderThickness="2" BorderBrush="Black" Opacity="1"></Border>
+    <Grid Opacity="70">
+
+        <Border Opacity="0.7" Height="460" Width="500" Background="Lavender"  CornerRadius="20" BorderThickness="2" BorderBrush="Black"></Border>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="44"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="1.2*"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
             </Grid.RowDefinitions>
             <Border BorderThickness="0 0 0 2" BorderBrush="Black" Grid.ColumnSpan="2">
-                <StackPanel Opacity="60" Height="40" Grid.ColumnSpan="2">
-                    <Grid Height="40">
+                <StackPanel Opacity="60" Height="44" Grid.ColumnSpan="2">
+                    <Grid Height="44">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
@@ -50,24 +51,48 @@
                         
                     </Button>
                 <StackPanel>
-                    <Label Content="Логин" FontSize="16" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                    <Label Content="Логин" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
                     <TextBox Style="{DynamicResource TextBox}" Grid.Row="3" x:Name="txtLogin"></TextBox>
                 </StackPanel>
-                <StackPanel>
-                    <Label Content="Пароль" FontSize="16" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-                    <PasswordBox Background="#9C9C9C" Grid.Row="3" x:Name="txtPassword" Width="200" Height="34" Foreground="#4E5754" Focusable="False" BorderBrush="Black"></PasswordBox>
+                <StackPanel x:Name="spPass" >
+                    <Label Content="Пароль" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                    <Grid>
+                        <TextBox Grid.Row="3" x:Name="tbPassword" Style="{DynamicResource TextBox}" Foreground="Lavender" Focusable="False" BorderBrush="Black"></TextBox>
+                        <PasswordBox Grid.Row="3" x:Name="txtPassword" Style="{DynamicResource PasswordBox}" Foreground="Lavender" Focusable="False" BorderBrush="Black"></PasswordBox>
+                        <Button x:Name="btnTogglePassword" Content="👁" Background="Lavender" HorizontalAlignment="Right" Width="24" Height="24" Click="Button_lock"></Button>
+                    </Grid>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
                 <StackPanel  Grid.Row="2" HorizontalAlignment="Center">
-                    <Label Content="Имя" FontSize="16"></Label>
+                    <Label Content="Имя" FontSize="18"></Label>
                     <TextBox x:Name="txtName" Style="{DynamicResource TextBox}" ></TextBox>
                 </StackPanel>
                 <StackPanel  Grid.Row="2" HorizontalAlignment="Center" >
-                    <Label Content="Фамилия" FontSize="16"></Label>
+                    <Label Content="Фамилия" FontSize="18"></Label>
                     <TextBox x:Name="txtSurname" Style="{DynamicResource TextBox}"></TextBox>
                 </StackPanel>
             </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" x:Name="dop_info">
+                <StackPanel  Grid.Row="2" HorizontalAlignment="Center" >
+                    <Label Content="Отчество" FontSize="18"></Label>
+                    <TextBox  x:Name="txtLastname" Style="{DynamicResource TextBox}"></TextBox>
+                </StackPanel>
+                <StackPanel  Grid.Row="2" HorizontalAlignment="Center" >
+                    <Label Content="Пол" FontSize="18"></Label>
+                    <StackPanel Orientation="Horizontal" x:Name="stackPanel">
+                        <CheckBox x:Name="ManChecked" 
+                                  IsChecked="False" Height="20" Content="Мужской" 
+                                  FontSize="16" VerticalContentAlignment="Center" 
+                                  Checked="OnGenderChecked"/>
+                        <CheckBox x:Name="WomanChecked" IsChecked="False" 
+                                  Height="20" Content="Женский" FontSize="16" 
+                                  VerticalContentAlignment="Center" Checked="OnGenderChecked" Margin="20 0 0 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <Button BorderThickness="1" BorderBrush="Black" Grid.Row="3" Content="Редактировать" Margin="30 10" Background="LightSteelBlue" Click="Button_update"></Button>
+            <Button x:Name="save"  BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1" Content="Сохранить" Margin="30 10" Background="DarkSeaGreen" Click="Button_save"></Button>
         </Grid>
     </Grid>
 </Window>

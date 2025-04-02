@@ -28,6 +28,7 @@ namespace CursWpf
             InitializeComponent();
       
             LoadProfileImage();
+            LoadUserData();
         }
 
         private void Button_back(object sender, RoutedEventArgs e)
@@ -52,7 +53,61 @@ namespace CursWpf
 
         }
 
-
+        private void LoadUserData()
+        {
+            if (DBManager.id_buyer != 0)
+            {
+                var buyer = DBManager.db.Buyer.FirstOrDefault(b => b.id == DBManager.id_buyer);
+                if (buyer != null)
+                {
+                    txtLogin.Text = buyer.login;
+                    txtName.Text = buyer.name;
+                    txtSurname.Text = buyer.surname;
+                    txtPassword.Password = buyer.password; 
+                    txtLastname.Text = buyer.lastname;
+                    tbPassword.Text = buyer.password;
+                    if (!string.IsNullOrEmpty(buyer.gender))
+                    {
+                        if (buyer.gender.Equals("M", StringComparison.OrdinalIgnoreCase))
+                        {
+                            ManChecked.IsChecked = true;
+                            WomanChecked.IsChecked = false;
+                        }
+                        else if (buyer.gender.Equals("W", StringComparison.OrdinalIgnoreCase))
+                        {
+                            ManChecked.IsChecked = false;
+                            WomanChecked.IsChecked = true;
+                        }
+                    }
+                }
+            }
+            else if (DBManager.id_employee != 0)
+            {
+                var employee = DBManager.db.Employee.FirstOrDefault(e => e.id == DBManager.id_employee);
+                if (employee != null)
+                {
+                    txtLogin.Text = employee.login;
+                    txtName.Text = employee.name;
+                    txtSurname.Text = employee.surname;
+                    txtPassword.Password = employee.password; 
+                    txtLastname.Text= employee.lastname;
+                    tbPassword.Text = employee.password;
+                    if (!string.IsNullOrEmpty(employee.gender))
+                    {
+                        if (employee.gender.Equals("M", StringComparison.OrdinalIgnoreCase))
+                        {
+                            ManChecked.IsChecked = true;
+                            WomanChecked.IsChecked = false;
+                        }
+                        else if (employee.gender.Equals("W", StringComparison.OrdinalIgnoreCase))
+                        {
+                            ManChecked.IsChecked = false;
+                            WomanChecked.IsChecked = true;
+                        }
+                    }
+                }
+            }
+        }
         private void Button_add_image(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog
@@ -69,8 +124,7 @@ namespace CursWpf
                     var bitmap = new BitmapImage(new Uri(openFileDialog.FileName));
                     ProfileImage.Source = bitmap;
 
-                    // Обновляем фото только для текущего пользователя
-                    if (DBManager.id_buyer != 0) // Если вошёл покупатель
+                    if (DBManager.id_buyer != 0) 
                     {
                         var buyer = DBManager.db.Buyer.FirstOrDefault(b => b.id == DBManager.id_buyer);
                         if (buyer != null)
@@ -80,7 +134,7 @@ namespace CursWpf
                             MessageBox.Show("Фото покупателя обновлено!");
                         }
                     }
-                    else if (DBManager.id_employee != 0) // Если вошёл сотрудник
+                    else if (DBManager.id_employee != 0) 
                     {
                         var employee = DBManager.db.Employee.FirstOrDefault(emp => emp.id == DBManager.id_employee);
                         if (employee != null)
@@ -126,7 +180,113 @@ namespace CursWpf
                 }
             }
         }
+        private void OnGenderChecked(object sender, RoutedEventArgs e)
+        {
+            var currentCheckBox = (CheckBox)sender;
 
+            if (currentCheckBox.IsChecked == true)
+            {
+                if (currentCheckBox == ManChecked)
+                {
+                    WomanChecked.IsChecked = false;
+                }
+                else
+                {
+                    ManChecked.IsChecked = false;
+                }
+            }
+        }
+
+        private void Button_update(object sender, RoutedEventArgs e)
+        {
+
+            txtLogin.IsReadOnly = false;
+            txtLogin.Focusable = true;
+            txtName.IsReadOnly = false;
+            txtName.Focusable = true;
+            txtSurname.IsReadOnly = false;
+            txtSurname.Focusable = true;
+            txtLastname.IsReadOnly = false;
+            txtLastname.Focusable = true;
+            tbPassword.IsReadOnly = false;
+            tbPassword.Focusable = true;
+
+            ManChecked.IsEnabled = true;
+            WomanChecked.IsEnabled = true;
+
+            txtLogin.Focus();
+        }
+
+        private void Button_save(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                string gender = null;
+                if (ManChecked.IsChecked == true)
+                    gender = "m";
+                else if (WomanChecked.IsChecked == true)
+                    gender = "w";
+
+              
+                if (DBManager.roles == 3) 
+                {
+                    var buyer = DBManager.db.Buyer.FirstOrDefault(b => b.id == DBManager.id_buyer);
+                    if (buyer != null)
+                    {
+                        buyer.login = txtLogin.Text;
+                        buyer.password = tbPassword.Text;
+                        buyer.name = txtName.Text;
+                        buyer.surname = txtSurname.Text;
+                        buyer.lastname = txtLastname.Text; 
+                        buyer.gender = gender; 
+
+                        DBManager.db.SaveChanges(); 
+                        MessageBox.Show("Данные успешно сохранены!");
+                    }
+                }
+                else if (DBManager.roles == 2) // Если роль 2 - это сотрудник
+                {
+                    var employee = DBManager.db.Employee.FirstOrDefault(emp => emp.id == DBManager.id_employee);
+                    if (employee != null)
+                    {
+                        employee.login = txtLogin.Text;
+                        employee.password = tbPassword.Text;
+                        employee.name = txtName.Text;
+                        employee.surname = txtSurname.Text;
+                        employee.lastname = txtLastname.Text;
+                        employee.gender = gender;
+                        DBManager.db.SaveChanges(); 
+                        MessageBox.Show("Данные успешно сохранены!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении данных: {ex.Message}");
+            }
+        }
+        private bool isPasswordVisible = false;
+
+        private void Button_lock(object sender, RoutedEventArgs e)
+        {
+            isPasswordVisible = !isPasswordVisible;
+
+            if (isPasswordVisible)
+            {
+                tbPassword.Text = txtPassword.Password;
+                tbPassword.Visibility = Visibility.Visible;
+                txtPassword.Visibility = Visibility.Collapsed;
+                btnTogglePassword.Content = "🔒";
+            }
+            else
+            {
+                txtPassword.Password = tbPassword.Text;
+                txtPassword.Visibility = Visibility.Visible;
+                tbPassword.Visibility = Visibility.Collapsed;
+                btnTogglePassword.Content = "👁";
+            }
+        }
 
     }
 }

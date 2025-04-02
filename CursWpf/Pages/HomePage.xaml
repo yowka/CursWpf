@@ -9,6 +9,37 @@
       Title="HomePage">
 
     <Grid>
-        <Image Source="/images/back.jpg" Stretch="UniformToFill"></Image>
+        <Image Source="/images/back.jpg" Stretch="UniformToFill" />
+        <Border Background="#80000000" CornerRadius="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.Triggers>
+                        <EventTrigger RoutedEvent="Grid.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation 
+                                Storyboard.TargetProperty="Opacity"
+                                From="0" To="1" Duration="0:0:2.5" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Grid.Triggers>
+
+                    <TextBlock Text="Добро пожаловать в наш автосалон!" 
+                       FontSize="36" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" />
+
+                    <TextBlock Text="Мы предлагаем широкий выбор автомобилей от ведущих производителей мира. У нас вы найдете идеальный автомобиль для себя — от бюджетных моделей до премиальных машин." 
+                       FontSize="16" Foreground="White" TextWrapping="Wrap" 
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="540" Margin="40,20,0,0"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
+                        <Image Source="/images/icon-rem.png" Width="150" Height="100" Margin="10" />
+                        <Image Source="/images/lock.png" Width="150" Height="100" Margin="10" />
+                        <Image Source="/images/back.jpg" Width="150" Height="100" Margin="10" />
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Page>
