@@ -4,9 +4,23 @@
         <Setter Property="Width" Value="200"/>
         <Setter Property="Height" Value="34"/>
         <Setter Property="IsReadOnly" Value="True"/>
-        <Setter Property="Foreground" Value="#4E5754"/>
-        <Setter Property="Background" Value="#9C9C9C"/>
+        <Setter Property="Foreground" Value="#f5f5f5"/>
+        <Setter Property="Background" Value="#4f4f4f"/>
         <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5"/>
+    </Style>  
+    
+    <Style x:Key="PasswordBox" TargetType="PasswordBox">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Foreground" Value="#f5f5f5"/>
+        <Setter Property="Background" Value="#4f4f4f"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>

@@ -29,6 +29,7 @@ namespace CursWpf
         public string surname { get; set; }
         public string lastname { get; set; }
         public byte[] photo { get; set; }
+        public string gender { get; set; }
         public string number { get; set; }
         public int role_id { get; set; }
     
