@@ -1,6 +1,7 @@
 ﻿using CursWpf.Pages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace CursWpf
         public MainWindow()
         {
             InitializeComponent();
+            LoadProfileImage();
             this.Focus();
             if (DBManager.roles == 2)
             {
@@ -35,6 +37,7 @@ namespace CursWpf
                 employee.Visibility = Visibility.Visible;
             }
         }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             HomePage homePage = new HomePage();
@@ -68,6 +71,35 @@ namespace CursWpf
             PageCatalog pageCatalog = new PageCatalog();
             frame.Navigate(pageCatalog);
         }
+        private void LoadProfileImage()
+        {
+            var currentUser = DBManager.db.Buyer.FirstOrDefault(u => u.id == DBManager.id_buyer);
+            if (currentUser?.photo != null)
+            {
+                using (MemoryStream ms = new MemoryStream(currentUser.photo))
+                {
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.StreamSource = ms;
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    ProfileImage.Source = bitmap;
+                }
+            }
+            var currentEmployee = DBManager.db.Employee.FirstOrDefault(e => e.id == DBManager.id_employee);
+            if (currentEmployee?.photo != null)
+            {
+                using (MemoryStream ms = new MemoryStream(currentEmployee.photo))
+                {
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.StreamSource = ms;
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    ProfileImage.Source = bitmap;
+                }
+            }
 
+        }
     }
 }

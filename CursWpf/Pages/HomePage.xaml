@@ -29,9 +29,33 @@
                        FontSize="36" FontWeight="Bold" Foreground="White" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" />
 
-                    <TextBlock Text="Мы предлагаем широкий выбор автомобилей от ведущих производителей мира. У нас вы найдете идеальный автомобиль для себя — от бюджетных моделей до премиальных машин." 
-                       FontSize="16" Foreground="White" TextWrapping="Wrap" 
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="540" Margin="40,20,0,0"/>
+                    <TextBlock x:Name="animatedTextBlock" 
+                   Text="Мы предлагаем широкий выбор автомобилей от ведущих производителей мира. У нас вы найдете идеальный автомобиль для себя — от бюджетных моделей до премиальных машин." 
+                   FontSize="16" 
+                   Foreground="White" 
+                   TextWrapping="Wrap" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Center" 
+                   Width="540" 
+                   Margin="40,20,40,0"
+                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <TranslateTransform x:Name="textTransform" X="600"/>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="textTransform"
+                                           Storyboard.TargetProperty="X"
+                                           From="600" To="0" 
+                                           Duration="0:0:1.5"
+                                           DecelerationRatio="0.5"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
                         <Image Source="/images/icon-rem.png" Width="150" Height="100" Margin="10" />

@@ -32,7 +32,16 @@
                 <Button Style="{DynamicResource ButtonZero}" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог" Click="Button_Catalog"/>
             </StackPanel>
             <Button Click="Button_Profile" Style="{DynamicResource ButtonZero}" Background="Transparent" Height="60" HorizontalAlignment="Center" Grid.Column="2">
-                <Image Source="/images/icon-rem.png"></Image>
+                <Border CornerRadius="170">
+                    <Image Width="60" Height="60" Stretch="UniformToFill" x:Name="ProfileImage" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image.Clip>
+                            <EllipseGeometry RadiusX="30" RadiusY="30" Center="30,30"/>
+                        </Image.Clip>
+                        <Image.Source>
+                            <BitmapImage UriSource="images/addphoto.png"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
             </Button>
         </Grid>
 

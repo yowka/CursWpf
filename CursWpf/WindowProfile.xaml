@@ -10,7 +10,7 @@
         Title="WindowProfile" Height="460" Width="500" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Grid Opacity="70">
 
-        <Border Opacity="0.7" Height="460" Width="500" Background="Lavender"  CornerRadius="20" BorderThickness="2" BorderBrush="Black"></Border>
+        <Border Opacity="0.9" Height="460" Width="500" Background="Lavender"  CornerRadius="20" BorderThickness="2" BorderBrush="Black"></Border>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -73,7 +73,7 @@
                     <TextBox x:Name="txtSurname" Style="{DynamicResource TextBox}"></TextBox>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" x:Name="dop_info">
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" x:Name="dop_info" Visibility="Collapsed">
                 <StackPanel  Grid.Row="2" HorizontalAlignment="Center" >
                     <Label Content="Отчество" FontSize="18"></Label>
                     <TextBox  x:Name="txtLastname" Style="{DynamicResource TextBox}"></TextBox>

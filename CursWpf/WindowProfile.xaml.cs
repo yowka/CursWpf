@@ -199,6 +199,7 @@ namespace CursWpf
 
         private void Button_update(object sender, RoutedEventArgs e)
         {
+            dop_info.Visibility = Visibility.Visible;
 
             txtLogin.IsReadOnly = false;
             txtLogin.Focusable = true;
