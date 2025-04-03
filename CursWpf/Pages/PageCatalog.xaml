@@ -22,12 +22,12 @@
                         <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" 
                                 Margin="5" Padding="10" Width="250">
                             <StackPanel>
-                                <TextBlock Text="{Binding year_of_production}" FontWeight="Bold" Margin="0,5,0,0"/>
-                                <TextBlock Text="{Binding price, StringFormat='{}Цена: {0:C}'}" Margin="0,5,0,0" FontWeight="Bold" Foreground="Green"/>
-                                <TextBlock Text="{Binding Brand.title}" Foreground="Gray"/>
-                                <TextBlock Text="{Binding title}" Foreground="Gray"/>
-                                <TextBlock Text="{Binding Color.title}" Foreground="Gray"/>
-                                <TextBlock Text="{Binding Category_ID.title}" Foreground="Gray"/>
+                                <TextBlock FontSize="20" Text="{Binding year_of_production}" FontWeight="Bold" Margin="0,5,0,0"/>
+                                <TextBlock FontSize="20" Text="{Binding price, StringFormat='{}Цена: {0:C}'}" Margin="0,5,0,0" FontWeight="Bold" Foreground="Green"/>
+                                <TextBlock FontSize="20" Text="{Binding Brand.title}" Foreground="Gray"/>
+                                <TextBlock FontSize="20" Text="{Binding title}" Foreground="Gray"/>
+                                <TextBlock FontSize="20" Text="{Binding Color.title}" Foreground="Gray"/>
+                                <TextBlock FontSize="20" Text="{Binding Category_ID.title}" Foreground="Gray"/>
                             </StackPanel>
                         </Border>
                     </DataTemplate>
