@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,16 @@ namespace CursWpf.Pages
         public PageCatalog()
         {
             InitializeComponent();
+            LoadAutomobiles();
+        }
+        private void LoadAutomobiles()
+        {
+                var automobiles = DBManager.db.Automobile
+                      .Include(a => a.Brand)
+                      .Include(a => a.Color)
+                     .Include(a => a.Category)
+                     .ToList();
+                AutomobilesList.ItemsSource = automobiles.ToList();
         }
     }
 }
