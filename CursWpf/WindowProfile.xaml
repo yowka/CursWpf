@@ -10,7 +10,7 @@
         Title="WindowProfile" Height="460" Width="500" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Grid Opacity="70">
 
-        <Border Opacity="0.9" Height="460" Width="500" Background="Lavender"  CornerRadius="20" BorderThickness="2" BorderBrush="Black"></Border>
+        <Border Height="460" Width="500" Background="White"  CornerRadius="20" BorderThickness="2" BorderBrush="Black"></Border>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
