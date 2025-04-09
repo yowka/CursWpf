@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 
 namespace CursWpf
 {
@@ -9,6 +10,7 @@ namespace CursWpf
     {
         public static skirnevskiy_courseEntities db = new skirnevskiy_courseEntities();
 
+        public static ImageSource CurrentProfileImage { get; set; }
         public static int id_buyer { get; set; }
         public static int id_employee { get; set; }
         public static string login { get; set; }

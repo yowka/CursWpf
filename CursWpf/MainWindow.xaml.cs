@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +27,10 @@ namespace CursWpf
         {
             InitializeComponent();
             LoadProfileImage();
+            if (DBManager.CurrentProfileImage != null)
+            {
+                ProfileImage.Source = DBManager.CurrentProfileImage;
+            }
             this.Focus();
             if (DBManager.roles == 2)
             {
@@ -60,6 +65,8 @@ namespace CursWpf
         }
         private void Click_Sale(object sender, RoutedEventArgs e)
         {
+            PageSaleAutomobile pageSale = new PageSaleAutomobile();
+            frame.Navigate(pageSale);
         }
         private void Button_Profile(object sender, RoutedEventArgs e)
         {

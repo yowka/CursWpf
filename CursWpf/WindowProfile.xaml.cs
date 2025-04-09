@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Net.NetworkInformation;
 
 namespace CursWpf
 {
@@ -153,6 +154,8 @@ namespace CursWpf
         }
         private void LoadProfileImage()
         {
+            ProfileImage.Source = bitmap;
+            DBManager.CurrentProfileImage = bitmap;
             var currentUser = DBManager.db.Buyer.FirstOrDefault(u => u.id == DBManager.id_buyer);
             if (currentUser?.photo != null)
             {
