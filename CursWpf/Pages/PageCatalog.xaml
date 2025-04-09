@@ -28,6 +28,7 @@
                                 <TextBlock FontSize="20" Text="{Binding title}" Foreground="Gray"/>
                                 <TextBlock FontSize="20" Text="{Binding Color.title}" Foreground="Gray"/>
                                 <TextBlock FontSize="20" Text="{Binding Category_ID.title}" Foreground="Gray"/>
+                                <Button Content="Оформить заявку" Height="30" Click="Button_order"></Button>
                             </StackPanel>
                         </Border>
                     </DataTemplate>

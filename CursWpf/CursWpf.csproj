@@ -171,6 +171,9 @@
     <Compile Include="Pages\PageEmployee.xaml.cs">
       <DependentUpon>PageEmployee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageOrder.xaml.cs">
+      <DependentUpon>PageOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageSaleAutomobile.xaml.cs">
       <DependentUpon>PageSaleAutomobile.xaml</DependentUpon>
     </Compile>
@@ -246,6 +249,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

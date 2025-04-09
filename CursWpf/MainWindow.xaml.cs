@@ -27,15 +27,13 @@ namespace CursWpf
         {
             InitializeComponent();
             LoadProfileImage();
-            if (DBManager.CurrentProfileImage != null)
-            {
-                ProfileImage.Source = DBManager.CurrentProfileImage;
-            }
+      
             this.Focus();
             if (DBManager.roles == 2)
             {
                 tables.Visibility = Visibility.Visible;
                 sale.Visibility = Visibility.Visible;
+                order.Visibility = Visibility.Visible;
             }
             if (DBManager.roles == 1)
             {
@@ -72,6 +70,7 @@ namespace CursWpf
         {
             WindowProfile windowProfile = new WindowProfile();
             windowProfile.ShowDialog();
+            LoadProfileImage();
         }
         private void Button_Catalog(object sender, RoutedEventArgs e)
         {
@@ -80,6 +79,11 @@ namespace CursWpf
         }
         private void LoadProfileImage()
         {
+            if (DBManager.CurrentImage != null)
+            {
+                ProfileImage.Source = DBManager.CurrentImage;
+                return;
+            }
             var currentUser = DBManager.db.Buyer.FirstOrDefault(u => u.id == DBManager.id_buyer);
             if (currentUser?.photo != null)
             {
@@ -91,6 +95,7 @@ namespace CursWpf
                     bitmap.CacheOption = BitmapCacheOption.OnLoad;
                     bitmap.EndInit();
                     ProfileImage.Source = bitmap;
+                    DBManager.CurrentImage = bitmap; 
                 }
             }
             var currentEmployee = DBManager.db.Employee.FirstOrDefault(e => e.id == DBManager.id_employee);
@@ -104,9 +109,16 @@ namespace CursWpf
                     bitmap.CacheOption = BitmapCacheOption.OnLoad;
                     bitmap.EndInit();
                     ProfileImage.Source = bitmap;
+                    DBManager.CurrentImage = bitmap; 
                 }
             }
 
+        }
+
+        private void Click_order(object sender, RoutedEventArgs e)
+        {
+            PageOrder order = new PageOrder();
+            frame.Navigate(order);
         }
     }
 }

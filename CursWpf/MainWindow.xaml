@@ -27,6 +27,7 @@
             </Button>
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
+                <Button Style="{DynamicResource ButtonZero}" Click="Click_order" x:Name="order" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Заявки" Visibility="Collapsed"/>
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Sale" x:Name="sale" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Отчёт о продаже" Visibility="Collapsed"/>
                 <Button Style="{DynamicResource ButtonZero}" Click="Click_Tables" x:Name="tables" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Управление таблицами" Visibility="Collapsed"/>
                 <Button Style="{DynamicResource ButtonZero}" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог" Click="Button_Catalog"/>

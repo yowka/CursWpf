@@ -27,9 +27,9 @@ namespace CursWpf
         public WindowProfile()
         {
             InitializeComponent();
-      
             LoadProfileImage();
             LoadUserData();
+
         }
 
         private void Button_back(object sender, RoutedEventArgs e)
@@ -124,7 +124,7 @@ namespace CursWpf
                     byte[] imageData = File.ReadAllBytes(openFileDialog.FileName);
                     var bitmap = new BitmapImage(new Uri(openFileDialog.FileName));
                     ProfileImage.Source = bitmap;
-
+                    DBManager.CurrentImage = bitmap;
                     if (DBManager.id_buyer != 0) 
                     {
                         var buyer = DBManager.db.Buyer.FirstOrDefault(b => b.id == DBManager.id_buyer);
@@ -154,8 +154,6 @@ namespace CursWpf
         }
         private void LoadProfileImage()
         {
-            ProfileImage.Source = bitmap;
-            DBManager.CurrentProfileImage = bitmap;
             var currentUser = DBManager.db.Buyer.FirstOrDefault(u => u.id == DBManager.id_buyer);
             if (currentUser?.photo != null)
             {
@@ -223,6 +221,7 @@ namespace CursWpf
 
         private void Button_save(object sender, RoutedEventArgs e)
         {
+
             try
             {
 

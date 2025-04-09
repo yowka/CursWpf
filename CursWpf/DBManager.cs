@@ -3,14 +3,14 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace CursWpf
 {
     internal class DBManager
     {
         public static skirnevskiy_courseEntities db = new skirnevskiy_courseEntities();
-
-        public static ImageSource CurrentProfileImage { get; set; }
+        public static BitmapImage CurrentImage { get; set; }
         public static int id_buyer { get; set; }
         public static int id_employee { get; set; }
         public static string login { get; set; }
