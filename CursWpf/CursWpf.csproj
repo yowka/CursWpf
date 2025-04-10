@@ -343,10 +343,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\close.png" />
     <Resource Include="Images\lock.png" />
     <Resource Include="Images\person.png" />
-    <Resource Include="Images\person_add.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -354,18 +352,16 @@
   <ItemGroup>
     <Resource Include="Images\крест простой.png" />
     <Resource Include="Images\back2.png" />
-    <Resource Include="Images\prof.png" />
     <Resource Include="Images\addphoto.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back.jpg" />
     <Resource Include="Images\icon-rem.png" />
-    <Resource Include="Images\logo-rem.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\passvision.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Images\oil.png" />
+    <Resource Include="Images\svecha.png" />
+    <Resource Include="Images\wheel.png" />
     <Content Include="ModelCourse.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelCourse.edmx</DependentUpon>

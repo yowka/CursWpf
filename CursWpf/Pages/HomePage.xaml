@@ -58,9 +58,9 @@
                     </TextBlock>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
-                        <Image Source="/images/icon-rem.png" Width="150" Height="100" Margin="10" />
-                        <Image Source="/images/lock.png" Width="150" Height="100" Margin="10" />
-                        <Image Source="/images/back.jpg" Width="150" Height="100" Margin="10" />
+                        <Image Source="/images/svecha.png" Width="150" Height="100" Margin="10" />
+                        <Image Source="/images/oil.png" Width="150" Height="100" Margin="10" />
+                        <Image Source="/images/wheel.png" Width="150" Height="100" Margin="10" />
                     </StackPanel>
                 </Grid>
             </ScrollViewer>
