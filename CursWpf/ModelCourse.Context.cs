@@ -33,6 +33,7 @@ namespace CursWpf
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Color> Color { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Sale_automobile> Sale_automobile { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

@@ -17,7 +17,6 @@ namespace CursWpf
         public static string password { get; set; }
         public static int roles { get; set; }
         public static string File { get; set; }
-
         public static bool Auth(string login, string password)
         {
             bool Auth = false;

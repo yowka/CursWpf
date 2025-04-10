@@ -36,7 +36,7 @@
           <Property Name="photo" Type="image" />
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="role_id" Type="int" Nullable="false" />
-          <Property Name="gender" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="gender" Type="nchar" MaxLength="1" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="lastname" Type="nvarchar" MaxLength="50" />
@@ -68,15 +68,27 @@
           <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="lastname" Type="nvarchar" MaxLength="50" />
           <Property Name="photo" Type="image" />
-          <Property Name="gender" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="gender" Type="nchar" MaxLength="1" />
           <Property Name="number" Type="nvarchar" MaxLength="11" Nullable="false" />
           <Property Name="role_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Automobile_ID" Type="int" Nullable="false" />
+          <Property Name="Buyer_id" Type="int" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="gender" Type="nchar" MaxLength="1" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="32" Nullable="false" />
         </EntityType>
         <EntityType Name="Sale_automobile">
@@ -177,10 +189,32 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sale_automobile_Buyer1">
-          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK_Order_Automobile">
+          <End Role="Automobile" Type="Self.Automobile" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Automobile">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Automobile_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Buyer">
+          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buyer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Buyer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sale_automobile_Buyer">
+          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1" />
           <End Role="Sale_automobile" Type="Self.Sale_automobile" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Buyer">
@@ -274,6 +308,7 @@
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sale_automobile" EntityType="Self.Sale_automobile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -301,7 +336,15 @@
             <End Role="Role" EntitySet="Role" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sale_automobile_Buyer1" Association="Self.FK_Sale_automobile_Buyer1">
+          <AssociationSet Name="FK_Order_Automobile" Association="Self.FK_Order_Automobile">
+            <End Role="Automobile" EntitySet="Automobile" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Buyer" Association="Self.FK_Order_Buyer">
+            <End Role="Buyer" EntitySet="Buyer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sale_automobile_Buyer" Association="Self.FK_Sale_automobile_Buyer">
             <End Role="Buyer" EntitySet="Buyer" />
             <End Role="Sale_automobile" EntitySet="Sale_automobile" />
           </AssociationSet>
@@ -335,6 +378,7 @@
           <NavigationProperty Name="Brand" Relationship="Self.FK_Automobile_Brand" FromRole="Automobile" ToRole="Brand" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Automobile_Category" FromRole="Automobile" ToRole="Category" />
           <NavigationProperty Name="Color" Relationship="Self.FK_Automobile_Color" FromRole="Automobile" ToRole="Color" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Automobile" FromRole="Automobile" ToRole="Order" />
         </EntityType>
         <EntityType Name="Brand">
           <Key>
@@ -356,12 +400,13 @@
           <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="role_id" Type="Int32" Nullable="false" />
-          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Buyer_Role" FromRole="Buyer" ToRole="Role" />
-          <NavigationProperty Name="Sale_automobile" Relationship="Self.FK_Sale_automobile_Buyer1" FromRole="Buyer" ToRole="Sale_automobile" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Buyer" FromRole="Buyer" ToRole="Order" />
+          <NavigationProperty Name="Sale_automobile" Relationship="Self.FK_Sale_automobile_Buyer" FromRole="Buyer" ToRole="Sale_automobile" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -392,17 +437,31 @@
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
           <Property Name="number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="role_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Employee_Role" FromRole="Employee" ToRole="Role" />
           <NavigationProperty Name="Sale_automobile" Relationship="Self.FK_Sale_automobile_Employee" FromRole="Employee" ToRole="Sale_automobile" />
         </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Automobile_ID" Type="Int32" Nullable="false" />
+          <Property Name="Buyer_id" Type="Int32" Nullable="false" />
+          <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Automobile" Relationship="Self.FK_Order_Automobile" FromRole="Order" ToRole="Automobile" />
+          <NavigationProperty Name="Buyer" Relationship="Self.FK_Order_Buyer" FromRole="Order" ToRole="Buyer" />
+        </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Buyer" Relationship="Self.FK_Buyer_Role" FromRole="Role" ToRole="Buyer" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Role" FromRole="Role" ToRole="Employee" />
@@ -417,7 +476,7 @@
           <Property Name="Employee_ID" Type="Int32" Nullable="false" />
           <Property Name="Buyer_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Automobile" Relationship="Self.FK__Sale_auto__Autom__5535A963" FromRole="Sale_automobile" ToRole="Automobile" />
-          <NavigationProperty Name="Buyer" Relationship="Self.FK_Sale_automobile_Buyer1" FromRole="Sale_automobile" ToRole="Buyer" />
+          <NavigationProperty Name="Buyer" Relationship="Self.FK_Sale_automobile_Buyer" FromRole="Sale_automobile" ToRole="Buyer" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Sale_automobile_Employee" FromRole="Sale_automobile" ToRole="Employee" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -484,6 +543,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Order_Automobile">
+          <End Role="Automobile" Type="Self.Automobile" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Automobile">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Automobile_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Buyer_Role">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="Buyer" Type="Self.Buyer" Multiplicity="*" />
@@ -496,10 +567,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sale_automobile_Buyer1">
-          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK_Order_Buyer">
+          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buyer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Buyer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sale_automobile_Buyer">
+          <End Role="Buyer" Type="Self.Buyer" Multiplicity="1" />
           <End Role="Sale_automobile" Type="Self.Sale_automobile" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Buyer">
@@ -543,6 +624,7 @@
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Color" EntityType="Self.Color" />
           <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="Order" EntityType="Self.Order" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Sale_automobile" EntityType="Self.Sale_automobile" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -562,11 +644,19 @@
             <End Role="Color" EntitySet="Color" />
             <End Role="Automobile" EntitySet="Automobile" />
           </AssociationSet>
+          <AssociationSet Name="FK_Order_Automobile" Association="Self.FK_Order_Automobile">
+            <End Role="Automobile" EntitySet="Automobile" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
           <AssociationSet Name="FK_Buyer_Role" Association="Self.FK_Buyer_Role">
             <End Role="Role" EntitySet="Role" />
             <End Role="Buyer" EntitySet="Buyer" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sale_automobile_Buyer1" Association="Self.FK_Sale_automobile_Buyer1">
+          <AssociationSet Name="FK_Order_Buyer" Association="Self.FK_Order_Buyer">
+            <End Role="Buyer" EntitySet="Buyer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sale_automobile_Buyer" Association="Self.FK_Sale_automobile_Buyer">
             <End Role="Buyer" EntitySet="Buyer" />
             <End Role="Sale_automobile" EntitySet="Sale_automobile" />
           </AssociationSet>
@@ -742,6 +832,19 @@
                 <ScalarProperty Name="gender" ColumnName="gender" />
                 <ScalarProperty Name="number" ColumnName="number" />
                 <ScalarProperty Name="role_id" ColumnName="role_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="skirnevskiy_courseModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Automobile_ID" ColumnName="Automobile_ID" />
+                <ScalarProperty Name="Buyer_id" ColumnName="Buyer_id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

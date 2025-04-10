@@ -31,13 +31,12 @@
             <DataGrid  x:Name="ListUser" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn  Visibility="Collapsed" Header="Id" Binding="{Binding id}"/>
-                    <DataGridTextColumn Header="Дата продажи" Binding="{Binding date, StringFormat='dd.MM.yyyy'}"/>
-                    <DataGridTextColumn Header="Название авто" Binding="{Binding Automobile.title}"/>
-                    <DataGridTextColumn Header="Имя сотрудника" Binding="{Binding Employee.name}"/>
-                    <DataGridTextColumn Header="ID покупателя" Binding="{Binding Buyer.id}"/>
-                    <DataGridTextColumn Header="Логин покупателя" Binding="{Binding Buyer.login}"/>
-                    <DataGridTextColumn Header="Имя покупателя" Binding="{Binding Buyer.name}"/>
-                    <DataGridTextColumn Header="Фамилия покупателя" Binding="{Binding Buyer.surname}"/>
+                    <DataGridTextColumn Header="Название авто" Binding="{Binding Automobile_ID}"/>
+                    <DataGridTextColumn Header="ID покупателя" Binding="{Binding Buyer_id}"/>
+                    <DataGridTextColumn Header="Логин покупателя" Binding="{Binding login}"/>
+                    <DataGridTextColumn Header="Пол покупателя" Binding="{Binding gender}"/>
+                    <DataGridTextColumn Header="Имя покупателя" Binding="{Binding name}"/>
+                    <DataGridTextColumn Header="Фамилия покупателя" Binding="{Binding surname}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>

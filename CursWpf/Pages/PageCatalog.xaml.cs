@@ -17,16 +17,14 @@ using DocumentFormat.OpenXml.Drawing.Charts;
 
 namespace CursWpf.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для PageCatalog.xaml
-    /// </summary>
+    
     public partial class PageCatalog : Page
     {
         public PageCatalog()
         {
             InitializeComponent();
             LoadAutomobiles();
-            
+
         }
         private void LoadAutomobiles()
         {
@@ -40,7 +38,34 @@ namespace CursWpf.Pages
         }
         private void Button_order(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Вы оставили заявку на покупку автомобиля");
+            var currentBuyer = DBManager.db.Buyer.FirstOrDefault(b => b.id == DBManager.id_buyer);
+            if (currentBuyer == null)
+            {
+                MessageBox.Show("Покупатель не найден!");
+                return;
+            }
+
+            var selectedAuto = (sender as Button).DataContext as Automobile;
+            
+            try
+            {
+                DBManager.db.Order.Add(new Order
+                {
+                    Automobile_ID = selectedAuto.id,
+                    Buyer_id = currentBuyer.id,
+                    login = currentBuyer.login,
+                    gender = currentBuyer.gender,
+                    name = currentBuyer.name,
+                    surname = currentBuyer.surname
+                });
+                
+                DBManager.db.SaveChanges();
+                MessageBox.Show("Заявка успешно оформлена!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка: " + ex.Message);
+            }
         }
     }
 }

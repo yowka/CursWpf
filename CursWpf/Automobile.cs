@@ -18,6 +18,7 @@ namespace CursWpf
         public Automobile()
         {
             this.Sale_automobile = new HashSet<Sale_automobile>();
+            this.Order = new HashSet<Order>();
         }
     
         public int id { get; set; }
@@ -33,5 +34,7 @@ namespace CursWpf
         public virtual Brand Brand { get; set; }
         public virtual Category Category { get; set; }
         public virtual Color Color { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

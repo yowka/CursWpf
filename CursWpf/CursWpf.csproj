@@ -147,6 +147,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelCourse.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>ModelCourse.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -354,7 +357,6 @@
     <Resource Include="Images\prof.png" />
     <Resource Include="Images\addphoto.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\back.jpg" />
     <Resource Include="Images\icon-rem.png" />
@@ -362,6 +364,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\passvision.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModelCourse.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelCourse.edmx</DependentUpon>
