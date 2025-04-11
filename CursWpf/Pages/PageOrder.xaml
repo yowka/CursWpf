@@ -27,7 +27,7 @@
 
 
         </StackPanel>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="2">
             <DataGrid  x:Name="ListUser" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn  Visibility="Collapsed" Header="Id" Binding="{Binding id}"/>
