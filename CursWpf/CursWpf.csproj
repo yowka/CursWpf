@@ -362,6 +362,7 @@
     <Resource Include="Images\oil.png" />
     <Resource Include="Images\svecha.png" />
     <Resource Include="Images\wheel.png" />
+    <Resource Include="Images\logo-rem.png" />
     <Content Include="ModelCourse.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelCourse.edmx</DependentUpon>
