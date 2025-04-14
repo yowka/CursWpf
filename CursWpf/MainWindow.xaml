@@ -22,17 +22,17 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="0.14*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Style="{DynamicResource ButtonZero}" Height="70" HorizontalAlignment="Center" Background="Transparent" Click="Button_Click">
+            <Button BorderBrush="Transparent" Height="70" HorizontalAlignment="Center" Background="Transparent" Click="Button_Click">
                 <Image Source="/Images/logo-rem.png"></Image>
             </Button>
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Style="{DynamicResource ButtonZero}" Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
-                <Button Style="{DynamicResource ButtonZero}" Click="Click_order" x:Name="order" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Заявки" Visibility="Collapsed"/>
-                <Button Style="{DynamicResource ButtonZero}" Click="Click_Sale" x:Name="sale" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Отчёт о продаже" Visibility="Collapsed"/>
-                <Button Style="{DynamicResource ButtonZero}" Click="Click_Tables" x:Name="tables" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Управление таблицами" Visibility="Collapsed"/>
-                <Button Style="{DynamicResource ButtonZero}" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог" Click="Button_Catalog"/>
+                <Button BorderBrush="Transparent"  Click="Click_Employee" x:Name="employee" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Персонал" Visibility="Collapsed"/>
+                <Button BorderBrush="Transparent"  Click="Click_order" x:Name="order" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Заявки" Visibility="Collapsed"/>
+                <Button BorderBrush="Transparent"  Click="Click_Sale" x:Name="sale" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Отчёт о продаже" Visibility="Collapsed"/>
+                <Button BorderBrush="Transparent"  Click="Click_Tables" x:Name="tables" Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Управление таблицами" Visibility="Collapsed"/>
+                <Button BorderBrush="Transparent"  Background="Transparent" Margin="10" FontSize="24" Foreground="White" Content="Каталог" Click="Button_Catalog"/>
             </StackPanel>
-            <Button Click="Button_Profile" Style="{DynamicResource ButtonZero}" Background="Transparent" Height="60" HorizontalAlignment="Center" Grid.Column="2">
+            <Button BorderBrush="Transparent"  Click="Button_Profile" Background="Transparent" Height="60" HorizontalAlignment="Center" Grid.Column="2">
                 <Border CornerRadius="170">
                     <Image Width="60" Height="60" Stretch="UniformToFill" x:Name="ProfileImage" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image.Clip>

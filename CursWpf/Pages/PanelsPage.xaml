@@ -39,7 +39,6 @@
             <Button Grid.Row="3" Style="{DynamicResource btnPanel}" x:Name="buyer" Content="Buyer" Click="buyer_Click"></Button>
             <Button Grid.Row="4" Style="{DynamicResource btnPanel}" x:Name="category" Content="Category" Click="category_Click"></Button>
             <Button Grid.Row="5" Style="{DynamicResource btnPanel}" x:Name="color" Content="Color" Click="color_Click"></Button>
-            <Button Grid.Row="6" Style="{DynamicResource btnPanel}" x:Name="sale" Content="Sale automobile" Click="sale_Click"></Button>
             <StackPanel Background="#272B2F" Opacity="0.61" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7">
                 <Frame Name="DataFrame" NavigationUIVisibility="Hidden" ></Frame>
             </StackPanel>

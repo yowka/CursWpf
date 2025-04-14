@@ -32,7 +32,6 @@ namespace CursWpf.Pages
                 buyer.Visibility = Visibility.Collapsed;
                 category.Visibility = Visibility.Collapsed;
                 color.Visibility= Visibility.Collapsed;
-                sale.Visibility= Visibility.Collapsed;
             }
             if (DBManager.roles == 2)
             {
@@ -42,7 +41,6 @@ namespace CursWpf.Pages
                 buyer.Visibility = Visibility.Visible;
                 category.Visibility = Visibility.Visible;
                 color.Visibility= Visibility.Visible;
-                sale.Visibility= Visibility.Visible;
             }
         }
 
@@ -75,13 +73,6 @@ namespace CursWpf.Pages
             PageColor pageColor = new PageColor();
             DataFrame.Navigate(pageColor);
         }
-
-        private void sale_Click(object sender, RoutedEventArgs e)
-        {
-            PageSaleAutomobile pageSale = new PageSaleAutomobile();
-            DataFrame.Navigate(pageSale);
-        }
-
         private void employee_Click(object sender, RoutedEventArgs e)
         {
             PageEmployee pageEmployee = new PageEmployee();

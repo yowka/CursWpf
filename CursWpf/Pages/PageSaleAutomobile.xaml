@@ -26,8 +26,8 @@
            
 
         </StackPanel>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
-            <DataGrid  x:Name="ListUser" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="False">
+        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="2">
+            <DataGrid MinHeight="500" MaxHeight="600" x:Name="ListUser" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="True" >
                 <DataGrid.Columns>
                     <DataGridTextColumn  Visibility="Collapsed" Header="Id" Binding="{Binding id}"/>
                     <DataGridTextColumn Header="Дата продажи" Binding="{Binding date, StringFormat='dd.MM.yyyy'}"/>
