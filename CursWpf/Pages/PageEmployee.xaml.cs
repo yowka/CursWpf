@@ -31,7 +31,7 @@ namespace CursWpf.Pages
             ListUser.ItemsSource = datausers;
         }
 
-        private void Button_Save(object sender, RoutedEventArgs e)
+        private void Button_Update(object sender, RoutedEventArgs e)
         {
             try
             {

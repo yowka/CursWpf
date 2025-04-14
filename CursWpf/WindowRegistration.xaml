@@ -9,57 +9,75 @@
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="{x:Null}"
-        Title="WindowRegistration" Height="750" Width="450"
-        KeyDown="Window_KeyDown"
-        >
+        Title="WindowRegistration" Height="600" Width="450"
+        KeyDown="Window_KeyDown">
+
     <Grid>
-        <Border Height="750" Width="450" Background="#272B2F" CornerRadius="20" Opacity="0.90"></Border>
+        <Border Height="600" Width="450" Background="#272B2F" CornerRadius="20" Opacity="0.95">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.5" ShadowDepth="5"/>
+            </Border.Effect>
+        </Border>
+
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"></RowDefinition>
-                <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-            <Button BorderBrush="Transparent" Click="Button_Close" Height="40" Width="40" HorizontalAlignment="Right" Background="Transparent" VerticalAlignment="Top" Margin="8">
-                <Image Source="images/крест простой.png"></Image>
+            <Button BorderBrush="Transparent" Click="Button_Close" Height="40" Width="40" 
+                    HorizontalAlignment="Right" Background="Transparent" VerticalAlignment="Top" Margin="8">
+                <Image Source="images/крест простой.png"/>
             </Button>
-            <Image Width="180" Height="180" Source="images/logo-rem.png">
-            </Image>
-            <Label Content="Автосалон" Grid.Row="1" Style="{DynamicResource lbHeader}"></Label>
-            <StackPanel Grid.Row="2" HorizontalAlignment="Center">
-                <Label Content="Имя" FontSize="18" Foreground="White"></Label>
-                <TextBox  x:Name="txtName" Width="300" Height="50" Style="{DynamicResource tbText}" ></TextBox>
-            </StackPanel>
-            <StackPanel Grid.Row="3" HorizontalAlignment="Center">
-                <Label Content="Фамилия" FontSize="18" Foreground="White"></Label>
-                <TextBox  x:Name="txtSurname" Width="300" Height="50" Style="{DynamicResource tbText}" ></TextBox>
-            </StackPanel>
-            <StackPanel Grid.Row="4" HorizontalAlignment="Center">
-                <Label Content="Логин" FontSize="18" Foreground="White"></Label>
-                <TextBox  x:Name="txtLogin" Width="300" Height="50" Style="{DynamicResource tbText}" ></TextBox>
-            </StackPanel>
-            <StackPanel Grid.Row="5" HorizontalAlignment="Center">
-                <Label Content="Пароль" FontSize="18" Foreground="White"></Label>
-                <PasswordBox VerticalContentAlignment="Center" x:Name="txtPassword" Width="300" Height="50" Foreground="DarkGray" Background="{x:Null}" BorderBrush="White" BorderThickness="1" FontSize="18"></PasswordBox>
-            </StackPanel>
-            <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Регистрация" Style="{DynamicResource btn}" Margin="15" Click="Registration_CLick"></Button>
-            </StackPanel>
-            <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
-                <StackPanel>
-                    <TextBlock Margin="15" Width="160" Style="{DynamicResource tb}">Войти в систему и авторизироваться:</TextBlock>
-                </StackPanel>
-                <StackPanel>
-                    <Button Content="Вход..." Style="{DynamicResource btn}" Click="Login_Click" Margin="15"></Button>
-                </StackPanel>
+
+            <Image Width="260" Height="120" Source="images/logo-rem.png" Grid.Row="0" VerticalAlignment="Center"/>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Имя" FontSize="16" Foreground="#AAAAAA" Margin="0 0 0 5"/>
+                <TextBox x:Name="txtName" Width="300" Height="40" Background="#1E2125" 
+                         Foreground="White" BorderBrush="#4E5257" BorderThickness="1" 
+                         FontSize="16" Padding="10" CaretBrush="White"/>
             </StackPanel>
 
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Фамилия" FontSize="16" Foreground="#AAAAAA" Margin="0 0 0 5"/>
+                <TextBox x:Name="txtSurname" Width="300" Height="40" Background="#1E2125" 
+                         Foreground="White" BorderBrush="#4E5257" BorderThickness="1" 
+                         FontSize="16" Padding="10" CaretBrush="White"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Логин" FontSize="16" Foreground="#AAAAAA" Margin="0 0 0 5"/>
+                <TextBox x:Name="txtLogin" Width="300" Height="40" Background="#1E2125" 
+                         Foreground="White" BorderBrush="#4E5257" BorderThickness="1" 
+                         FontSize="16" Padding="10" CaretBrush="White"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Пароль" FontSize="16" Foreground="#AAAAAA" Margin="0 0 0 5"/>
+                <PasswordBox x:Name="txtPassword" Width="300" Height="40" Background="#1E2125"
+                             Foreground="White" BorderBrush="#4E5257" BorderThickness="1"
+                             FontSize="16" Padding="10" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <Button Grid.Row="5" Content="Регистрация" Width="300" Height="45" Margin="0 20 0 0"
+                    Background="#3A3F45" Foreground="White" BorderBrush="#4E5257" 
+                    FontSize="18" FontWeight="Medium" Cursor="Hand"
+                    Click="Registration_CLick"/>
+
+            <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="#AAAAAA" VerticalAlignment="Center" FontSize="14" Margin="0 0 10 0">
+                    Уже есть аккаунт?
+                </TextBlock>
+                <Button Content="Вход" Background="Transparent" Foreground="#4A90E2"
+                        BorderThickness="0" FontSize="14" FontWeight="Medium" Cursor="Hand"
+                        Click="Login_Click"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
