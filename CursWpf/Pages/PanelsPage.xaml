@@ -28,13 +28,13 @@
             <StackPanel Background="#eaeaea" Grid.Column="1" Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3">
                 <Frame Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
             </StackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="1">
-                <Button Grid.Row="1" Style="{DynamicResource btnPanel}" x:Name="employee" Content="Employee" Visibility="Collapsed" Click="employee_Click" Margin="8"></Button>
-                <Button Grid.Row="1" Style="{DynamicResource btnPanel}" x:Name="automobile" Content="Automobile" Click="automobile_Click" Margin="8"></Button>
-                <Button Grid.Row="2" Style="{DynamicResource btnPanel}" x:Name="brand" Content="Brand" Click="brand_Click" Margin="8"></Button>
-                <Button Grid.Row="3" Style="{DynamicResource btnPanel}" x:Name="buyer" Content="Buyer" Click="buyer_Click" Margin="8"></Button>
-                <Button Grid.Row="4" Style="{DynamicResource btnPanel}" x:Name="category" Content="Category" Click="category_Click" Margin="8"></Button>
-                <Button Grid.Row="5" Style="{DynamicResource btnPanel}" x:Name="color" Content="Color" Click="color_Click" Margin="8"></Button>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="1"  Width="140">
+                <Button Style="{DynamicResource btnPanel}" x:Name="employee" Content="Employee" Visibility="Collapsed" Click="employee_Click" Margin="2 15"></Button>
+                <Button Style="{DynamicResource btnPanel}" x:Name="automobile" Content="Automobile" Click="automobile_Click" Margin="2 15"></Button>
+                <Button Style="{DynamicResource btnPanel}" x:Name="brand" Content="Brand" Click="brand_Click" Margin="2 15"></Button>
+                <Button Style="{DynamicResource btnPanel}" x:Name="buyer" Content="Buyer" Click="buyer_Click" Margin="2 15"></Button>
+                <Button Style="{DynamicResource btnPanel}" x:Name="category" Content="Category" Click="category_Click" Margin="2 15"></Button>
+                <Button Style="{DynamicResource btnPanel}" x:Name="color" Content="Color" Click="color_Click" Margin="2 15"></Button>
             </StackPanel>
            
             <StackPanel Background="#272B2F" Opacity="0.61" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7">
