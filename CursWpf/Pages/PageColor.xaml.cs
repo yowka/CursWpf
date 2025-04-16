@@ -6,52 +6,71 @@ using System.Windows.Controls;
 
 namespace CursWpf.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для PageColor.xaml
-    /// </summary>
     public partial class PageColor : Page
     {
         DBManager manager = new DBManager();
         public PageColor()
         {
             InitializeComponent();
+            LoadData();
+        }
 
-            ListUser.ItemsSource = null;
-            ListUser.Items.Clear();
-            List<Color> datausers = DBManager.db.Color.ToList();
-            ListUser.ItemsSource = datausers;
+        private void LoadData()
+        {
+            ListUser.ItemsSource = DBManager.db.Color.ToList();
         }
 
         private void Button_Update(object sender, RoutedEventArgs e)
         {
             try
             {
+                ListUser.CommitEdit(DataGridEditingUnit.Row, true);
+
+                var allColors = ListUser.ItemsSource as IEnumerable<Color>;
+
+                foreach (var color in allColors)
+                {
+                    if (color.id == 0) 
+                    {
+                        DBManager.db.Color.Add(color); 
+                    }
+                }
+
                 DBManager.db.SaveChanges();
-                MessageBox.Show("Изменения сохранены в базе данных!");
+                LoadData();
+
+                MessageBox.Show("Данные успешно сохранены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка при сохранении изменений: " + ex.Message);
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-            if (ListUser.SelectedItems != null)
+            if (ListUser.SelectedItem != null)
             {
-                var result = MessageBox.Show("Вы действительно хотите удалить запись?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var result = MessageBox.Show("Удалить выбранную запись?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    var currentUser = ListUser.SelectedItem as Color;
-                    DBManager.db.Color.Remove(currentUser);
-                    DBManager.db.SaveChanges();
-                    ListUser.ItemsSource = DBManager.db.Color.ToList();
-                    MessageBox.Show("Запись успешно удалена!");
+                    try
+                    {
+                        var selectedColor = ListUser.SelectedItem as Color;
+                        DBManager.db.Color.Remove(selectedColor);
+                        DBManager.db.SaveChanges();
+                        LoadData();
+                        MessageBox.Show("Запись удалена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Выделите данные для удаления!");
+                MessageBox.Show("Выберите запись для удаления!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }

@@ -1,66 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CursWpf.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для PageBrand.xaml
-    /// </summary>
     public partial class PageBrand : Page
     {
         DBManager manager = new DBManager();
         public PageBrand()
         {
             InitializeComponent();
+            LoadData();
+        }
 
-            ListUser.ItemsSource = null;
-            ListUser.Items.Clear();
-            List<Brand> datausers = DBManager.db.Brand.ToList();
-            ListUser.ItemsSource = datausers;
+        private void LoadData()
+        {
+            ListUser.ItemsSource = DBManager.db.Brand.ToList();
         }
 
         private void Button_Update(object sender, RoutedEventArgs e)
         {
             try
             {
+                ListUser.CommitEdit(DataGridEditingUnit.Row, true);
+
+                var allBrands = ListUser.ItemsSource as IEnumerable<Brand>;
+
+                foreach (var Brand in allBrands)
+                {
+                    if (Brand.id == 0)
+                    {
+                        DBManager.db.Brand.Add(Brand);
+                    }
+                }
+
                 DBManager.db.SaveChanges();
-                MessageBox.Show("Изменения сохранены в базе данных!");
+                LoadData();
+
+                MessageBox.Show("Данные успешно сохранены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка при сохранении изменений: " + ex.Message);
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-            if (ListUser.SelectedItems != null)
+            if (ListUser.SelectedItem != null)
             {
-                var result = MessageBox.Show("Вы действительно хотите удалить запись?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var result = MessageBox.Show("Удалить выбранную запись?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    var brand = ListUser.SelectedItem as Brand;
-                    DBManager.db.Brand.Remove(brand);
-                    DBManager.db.SaveChanges();
-                    ListUser.ItemsSource = DBManager.db.Brand.ToList();
-                    MessageBox.Show("Запись успешно удалена!");
+                    try
+                    {
+                        var selectedBrand = ListUser.SelectedItem as Brand;
+                        DBManager.db.Brand.Remove(selectedBrand);
+                        DBManager.db.SaveChanges();
+                        LoadData();
+                        MessageBox.Show("Запись удалена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Выделите данные для удаления!");
+                MessageBox.Show("Выберите запись для удаления!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
