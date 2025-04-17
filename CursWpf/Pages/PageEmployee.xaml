@@ -23,7 +23,7 @@
 
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
-            <DataGrid x:Name="ListUser" MaxHeight="500" MinHeight="500" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="False" CanUserAddRows="True" CanUserDeleteRows="True">
+            <DataGrid x:Name="ListUser" MaxHeight="500" MinHeight="500" AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="False" CanUserAddRows="True" CanUserDeleteRows="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Visibility="Collapsed" Header="Id" Binding="{Binding id}"/>
                     <DataGridTextColumn Header="Зарплата" Binding="{Binding salary}"/>
@@ -34,7 +34,7 @@
                     <DataGridTextColumn Header="Фамилия" Binding="{Binding surname}"/>
                     <DataGridTextColumn Header="Отчество" Binding="{Binding lastname}"/>
                     <DataGridTextColumn Header="Номер телефона" Binding="{Binding number}"/>
-                    <DataGridTextColumn Header="Роль" Binding="{Binding Role.id}"/>
+                    <DataGridTextColumn Header="Роль" Binding="{Binding role_id}" />
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>

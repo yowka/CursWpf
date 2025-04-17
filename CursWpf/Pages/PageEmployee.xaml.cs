@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +22,7 @@ namespace CursWpf.Pages
             ListUser.ItemsSource = DBManager.db.Employee.ToList();
         }
 
+      
         private void Button_Update(object sender, RoutedEventArgs e)
         {
             try
@@ -28,17 +31,17 @@ namespace CursWpf.Pages
 
                 var allEmployees = ListUser.ItemsSource as IEnumerable<Employee>;
 
-                foreach (var Employee in allEmployees)
+                foreach (var item in ListUser.Items)
                 {
-                    if (Employee.id == 0)
+                    if (item is Employee emp && emp.id == 0) 
                     {
-                        DBManager.db.Employee.Add(Employee);
+                        emp.role_id = 2;
+                        DBManager.db.Employee.Add(emp); 
                     }
                 }
-
                 DBManager.db.SaveChanges();
-                LoadData();
 
+                LoadData();
                 MessageBox.Show("Данные успешно сохранены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
@@ -62,9 +65,20 @@ namespace CursWpf.Pages
                         LoadData();
                         MessageBox.Show("Запись удалена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException dbEx)
+                    {
+                        // Обработка ошибок связанных данных
+                        string errorMessage = "Не удалось удалить запись:\n";
+                        var innerException = dbEx.InnerException?.InnerException ?? dbEx.InnerException;
+                        errorMessage += innerException?.Message ?? dbEx.Message;
+
+                        MessageBox.Show(errorMessage, "Ошибка удаления",
+                                      MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
+                                      MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
             }
