@@ -19,12 +19,15 @@ namespace CursWpf
     /// </summary>
     public partial class WindowAuthorization : Window
     {
+        public TextBox LoginBox => txtLogin;
+        public PasswordBox PasswordBox => txtPassword;
         public WindowAuthorization()
         {
+
             InitializeComponent();
         }
         
-        private void Login_Click(object sender, RoutedEventArgs e)
+        public void Login_Click(object sender, RoutedEventArgs e)
         {
             if (txtLogin.Text.Length > 0 && txtPassword.Password.Length > 0)
             {
@@ -46,7 +49,7 @@ namespace CursWpf
             }
         }
 
-        private void Registration_CLick(object sender, RoutedEventArgs e)
+        public void Registration_CLick(object sender, RoutedEventArgs e)
         {
             WindowRegistration windowRegistration = new WindowRegistration();
             this.Close();
@@ -54,7 +57,7 @@ namespace CursWpf
 
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        public void Window_KeyDown(object sender, KeyEventArgs e)
         {
             
             if (e.Key == Key.Enter){
@@ -63,9 +66,9 @@ namespace CursWpf
        
         }
 
-        private void Button_Close(object sender, RoutedEventArgs e)
+        public void Button_Close(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
     }
 }

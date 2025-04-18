@@ -32,7 +32,7 @@ namespace CursWpf
             windowAuthorization.Show();
         }
 
-        private void Registration_CLick(object sender, RoutedEventArgs e)
+        public void Registration_CLick(object sender, RoutedEventArgs e)
         {
             if (txtName.Text.Length > 0 && txtSurname.Text.Length > 0 && txtLogin.Text.Length>0 && txtPassword.Password.Length>0)
             {
