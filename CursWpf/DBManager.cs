@@ -13,8 +13,6 @@ namespace CursWpf
         public static BitmapImage CurrentImage { get; set; }
         public static int id_buyer { get; set; }
         public static int id_employee { get; set; }
-        public static string login { get; set; }
-        public static string password { get; set; }
         public static int roles { get; set; }
         public static string File { get; set; }
         public static bool Auth(string login, string password)
